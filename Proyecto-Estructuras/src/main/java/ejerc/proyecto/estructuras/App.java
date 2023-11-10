@@ -28,7 +28,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         Button btn_registrarse= new Button(" Registrarse ");
         Button btn_inicio=new Button(" Iniciar Sesión ");
-        Label lbl_cuenta= new Label("Aun no tienes una cuenta?");
+        Label lbl_cuenta= new Label("Aun no tienes una cuenta? Registrate");
         Font fuente_lbl = Font.font("Verdana", FontWeight.EXTRA_BOLD,10);
         lbl_cuenta.setFont(fuente_lbl);
         BorderPane root = new BorderPane();
@@ -50,6 +50,8 @@ public class App extends Application {
         root.setBottom(btn_salir);
         root.setCenter(btn_botones);
         btn_salir.setOnMouseClicked(e -> stage.close());
+        btn_registrarse.setOnMouseClicked(e-> mostrarVentanaRegistro());
+        btn_inicio.setOnMouseClicked(e ->mostrarVentanaInicioSesion());
         Scene scene = new Scene(root, 600, 300);
         stage.setTitle("Inicio");
         stage.setScene(scene);
@@ -58,6 +60,20 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+    public void mostrarVentanaRegistro(){
+        try {
+            Registro VentanaCrearCli = new Registro();
+            VentanaCrearCli.start(new Stage());
+        } catch (Exception ex) {
+        }
+    }
+    public void mostrarVentanaInicioSesion(){
+        try {
+            InicioSesion VentanaInicioSesion = new InicioSesion();
+            VentanaInicioSesion.start(new Stage());
+        } catch (Exception ex) {
+        }
     }
 
 }
