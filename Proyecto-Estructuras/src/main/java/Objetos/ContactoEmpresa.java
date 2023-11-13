@@ -9,31 +9,20 @@ package Objetos;
  * @author Lenovo
  */
 public class ContactoEmpresa extends Contacto{
-    private Contacto contactoDirector;
-    private Contacto contactoAsistente;
+    private String paginaweb;
 
     // Constructor
-    public ContactoEmpresa(String nombre, String numeroTelefono, String foto, String direccion, String emailPersonal, Contacto contactoDirector, Contacto contactoAsistente) {
+    public ContactoEmpresa(String nombre, String numeroTelefono, String foto, String direccion, String emailPersonal, String paginaweb) {
         super(nombre, numeroTelefono, foto, direccion, emailPersonal);
-        this.contactoDirector = contactoDirector;
-        this.contactoAsistente = contactoAsistente;
+        this.paginaweb = paginaweb;
     }
 
-    public Contacto getContactoDirector() {
-        return contactoDirector;
+    public String getPaginaweb() {
+        return paginaweb;
     }
 
-    public void setContactoDirector(Contacto contactoDirector) {
-        this.contactoDirector = contactoDirector;
+    public void setPaginaweb(String paginaweb) {
+        this.paginaweb = paginaweb;
     }
-
-    public Contacto getContactoAsistente() {
-        return contactoAsistente;
-    }
-
-    public void setContactoAsistente(Contacto contactoAsistente) {
-        this.contactoAsistente = contactoAsistente;
-    }
-    
     
 }

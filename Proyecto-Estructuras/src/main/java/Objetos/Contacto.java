@@ -20,11 +20,10 @@ public class Contacto implements Serializable{
     private String emailPersonal;
     private List<String> numerosTelefonicos;
     private List<String> redesSociales;
-    private Date fechaCumpleanos;
     private List<Contacto> contactosRelacionados;
 
     // Constructor
-    public Contacto(String nombre, String numeroTelefono, String foto, String direccion, String emailPersonal) {
+    public Contacto(String nombre, String numeroTelefono, String foto, String direccion, String emailPersonal ) {
         this.nombre = nombre;
         this.numeroTelefono = numeroTelefono;
         this.foto = foto;
@@ -34,10 +33,6 @@ public class Contacto implements Serializable{
         this.redesSociales = new ArrayList<>();
         this.contactosRelacionados = new ArrayList<>();
     }
-
-    // Métodos getter y setter (puedes generarlos automáticamente en tu IDE)
-    
-    // Otros métodos según sea necesario
 
     public String getNombre() {
         return nombre;
@@ -93,14 +88,6 @@ public class Contacto implements Serializable{
 
     public void setRedesSociales(List<String> redesSociales) {
         this.redesSociales = redesSociales;
-    }
-
-    public Date getFechaCumpleanos() {
-        return fechaCumpleanos;
-    }
-
-    public void setFechaCumpleanos(Date fechaCumpleanos) {
-        this.fechaCumpleanos = fechaCumpleanos;
     }
 
     public List<Contacto> getContactosRelacionados() {
