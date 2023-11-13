@@ -13,10 +13,10 @@ public class ContactoEmpresa extends Contacto{
     private Contacto contactoAsistente;
 
     // Constructor
-    public ContactoEmpresa(String nombre, String numeroTelefono, String foto, String direccion, String emailPersonal) {
+    public ContactoEmpresa(String nombre, String numeroTelefono, String foto, String direccion, String emailPersonal, Contacto contactoDirector, Contacto contactoAsistente) {
         super(nombre, numeroTelefono, foto, direccion, emailPersonal);
-        this.contactoDirector = null;
-        this.contactoAsistente = null;
+        this.contactoDirector = contactoDirector;
+        this.contactoAsistente = contactoAsistente;
     }
 
     public Contacto getContactoDirector() {
