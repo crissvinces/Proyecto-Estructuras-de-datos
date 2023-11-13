@@ -30,6 +30,8 @@ public class Menu extends Application {
         vertical1.setAlignment(Pos.CENTER);
         Scene scene = new Scene(vertical1, 400, 300);
         btn_Crearcontacto.setOnMouseClicked(e -> mostrarCrearContacto() );
+        btn_CerrarSesion.setOnMouseClicked(e -> stage.close());
+        btn_VerContactos.setOnMouseClicked(e -> mostrarContactos());
         stage.setTitle("Inicio de Sesión");
         stage.setScene(scene);
         stage.show();
