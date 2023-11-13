@@ -29,6 +29,7 @@ public class Menu extends Application {
         vertical1.setSpacing(25);
         vertical1.setAlignment(Pos.CENTER);
         Scene scene = new Scene(vertical1, 400, 300);
+        btn_Crearcontacto.setOnMouseClicked(e -> mostrarCrearContacto() );
         stage.setTitle("Inicio de Sesión");
         stage.setScene(scene);
         stage.show();
@@ -36,5 +37,21 @@ public class Menu extends Application {
       public static void main(String[] args) {
         launch(args);
     }
+      
+      public void mostrarCrearContacto(){
+        try {
+            CrearContacto VentanaContacto = new CrearContacto();
+            VentanaContacto.start(new Stage());
+        } catch (Exception ex) {
+        }
+    }
+      
+      public void mostrarContactos(){
+          try{
+              ListadeContactos mostrarContacto = new ListadeContactos();
+              mostrarContacto.start(new Stage());
+          }catch(Exception ex){
+          }
+      }
       
 }
